@@ -60,6 +60,21 @@ cd reactive
 mvn spring-boot:run
 ```
 
+## 💡 Interview Questions (Reactive vs Blocking)
+
+Here are some common interview questions related to the concepts demonstrated in this project:
+
+1. **What is Reactive Programming, and how does it differ from traditional blocking programming?**
+   - *Hint:* Discuss asynchronous, non-blocking, event-driven, and data stream concepts versus the thread-per-request model.
+2. **What is the difference between `Mono` and `Flux` in Project Reactor?**
+   - *Hint:* `Mono` emits 0 or 1 element, `Flux` emits 0 to N elements.
+3. **What is backpressure in Reactive Streams?**
+   - *Hint:* It's a mechanism that allows a subscriber to control the rate at which a publisher emits data, preventing the subscriber from being overwhelmed.
+4. **Why is Spring WebFlux not always faster than Spring Web MVC?**
+   - *Hint:* Reactive programming doesn't make code run faster; it allows an application to handle a higher volume of concurrent requests with fewer threads (better resource utilization under load).
+5. **Can you use JPA/Hibernate in a fully reactive Spring Boot application?**
+   - *Hint:* No, typical JDBC and JPA are inherently blocking. You need to use R2DBC for relational databases, or reactive drivers for NoSQL (MongoDB, Cassandra, Redis, etc.) to achieve a truly non-blocking stack end-to-end.
+
 ## 🤝 Contributing
 Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
 
