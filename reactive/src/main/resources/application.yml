@@ -1,0 +1,13 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: reactive
+  r2dbc:
+    url: r2dbc:h2:mem:///reactivedb
+    username: sa
+    password:
+  sql:
+    init:
+      mode: always
